@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="fr" class="no-js">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Les activités de la saison 2026-2027 | MJC Tilleul</title>
+    <meta
+      name="description"
+      content="Les cinq activités de la MJC Tilleul pour la saison 2026-2027 : spectacles, projections et rencontres. Filtrez par âge et par type d'activité."
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Crect width='48' height='48' fill='%230b1a28'/%3E%3Cpath d='M24 6 39 14v20L24 42 9 34V14Z' fill='none' stroke='%2317c3d9' stroke-width='3'/%3E%3C/svg%3E" />
+    <script>
+      document.documentElement.classList.remove("no-js");
+    </script>
+  </head>
+  <body>
+    <a class="lien-evitement" href="#contenu">Aller au contenu principal</a>
+
+    <header class="entete">
+      <div class="entete__interieur conteneur">
+        <a class="logo" href="index.html">
+          <svg width="42" height="42" viewBox="0 0 48 48" aria-hidden="true" focusable="false">
+            <path
+              d="M24 3 42 13v22L24 45 6 35V13Z"
+              fill="none"
+              stroke="#17c3d9"
+              stroke-width="3"
+              stroke-linejoin="round"
+            />
+            <path d="M24 32V17" stroke="#6fe3ef" stroke-width="3" stroke-linecap="round" />
+            <path d="M16 22h16" stroke="#6fe3ef" stroke-width="3" stroke-linecap="round" />
+          </svg>
+          <span>
+            <span class="logo__mention">Maison des cultures</span>
+            MJC Tilleul
+          </span>
+        </a>
+
+        <button
+          type="button"
+          class="btn-menu"
+          data-bouton-menu
+          aria-expanded="false"
+          aria-controls="navigation-principale"
+        >
+          Menu
+        </button>
+
+        <nav
+          id="navigation-principale"
+          class="nav"
+          data-nav
+          data-ouvert="false"
+          aria-label="Navigation principale"
+        >
+          <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="activites.html" aria-current="page">Les activités</a></li>
+            <li><a href="activite.html?activite=en-corps">En corps</a></li>
+            <li><a href="inscription.html">Inscription</a></li>
+          </ul>
+        </nav>
+
+        <a class="btn btn--principal" href="inscription.html">S’inscrire</a>
+      </div>
+    </header>
+
+    <main id="contenu">
+      <nav class="fil-ariane conteneur" aria-label="Fil d’Ariane">
+        <ol>
+          <li><a href="index.html">Accueil</a></li>
+          <li aria-current="page">Les activités</li>
+        </ol>
+      </nav>
+
+      <section class="section conteneur" aria-labelledby="titre-activites">
+        <p class="sur-titre">Saison 2026-2027</p>
+        <h1 id="titre-activites">Les activités</h1>
+        <p class="intro-large">
+          Cinq activités fictives pour montrer le parcours d’inscription. Chaque fiche indique l’âge requis,
+          la date, l’horaire, le lieu et le tarif.
+        </p>
+
+        <form class="filtres" data-filtres style="margin-top: 1.6rem" aria-label="Filtrer les activités">
+          <h2 class="champ__legende" style="font-size: 1.1rem">Filtrer la liste</h2>
+          <div class="filtres__ligne">
+            <div class="champ">
+              <label for="recherche">Rechercher une activité</label>
+              <input
+                type="search"
+                id="recherche"
+                name="recherche"
+                placeholder="par exemple : danse, cinéma"
+                autocomplete="off"
+              />
+              <p class="champ__indice" id="recherche-aide">
+                La recherche porte sur le titre, la description et le type d’activité.
+              </p>
+            </div>
+
+            <div class="champ">
+              <label for="type-activite">Type d’activité</label>
+              <select id="type-activite" name="type">
+                <option value="toutes" selected>Tous les types</option>
+                <option value="Spectacle">Spectacle</option>
+                <option value="Cinéma">Cinéma</option>
+                <option value="Rencontre">Rencontre</option>
+              </select>
+            </div>
+
+            <div class="champ">
+              <label for="age-enfant">Âge de l’enfant</label>
+              <select id="age-enfant" name="age">
+                <option value="tous" selected>Tous les âges</option>
+                <option value="3">3 à 5 ans</option>
+                <option value="5">5 à 7 ans</option>
+                <option value="8">8 à 10 ans</option>
+                <option value="12">12 ans et plus</option>
+              </select>
+            </div>
+
+            <div class="champ">
+              <span class="champ__legende" id="legende-resultats">Résultats</span>
+              <p class="champ__indice" id="resultat-compte" role="status" aria-live="polite">
+                5 activités affichées sur 5.
+              </p>
+              <p><button type="button" class="btn btn--fantome btn--petit" data-reinit>Réinitialiser les filtres</button></p>
+            </div>
+          </div>
+        </form>
+
+        <div class="grille grille--3" style="margin-top: 2rem">
+          <article
+            class="carte"
+            data-carte-activite
+            data-titre="En corps"
+            data-sous-titre="Quand le sport fait danser"
+            data-resume="Deux danseurs et un acrobate en baskets, le sport devient langage, musique live et cascades garanties."
+            data-categorie="Spectacle"
+            data-age-min="6"
+            data-age-max="12"
+          >
+            <div class="carte__visuel carte__visuel--cyan">
+              <span class="carte__categorie">Spectacle</span>
+              <span class="carte__visuel-texte">En corps</span>
+            </div>
+            <div class="carte__corps">
+              <h2>En corps</h2>
+              <p class="carte__sous-titre">Quand le sport fait danser</p>
+              <ul class="carte__meta">
+                <li><span data-icone="calendrier"></span> Samedi 10 octobre 2026</li>
+                <li><span data-icone="horloge"></span> 20h00</li>
+                <li><span data-icone="lieu"></span> Salle de l’Étage</li>
+              </ul>
+              <p class="carte__texte">
+                Sans parole : danse, acrobatie et projections. L’adulte accompagnateur entre gratuitement.
+              </p>
+              <div class="carte__pied">
+                <span class="etiquette-age">6 à 12 ans</span>
+                <a class="btn btn--fantome btn--petit" href="activite.html?activite=en-corps">Voir la fiche</a>
+                <span class="carte__tarif">4 €</span>
+              </div>
+            </div>
+          </article>
+
+          <article
+            class="carte"
+            data-carte-activite
+            data-titre="Des sorcières comme les autres"
+            data-sous-titre="Spectacle jeune public"
+            data-resume="Trois sorcières un peu étourdies, un chat et une potion qui déborde, pour les plus jeunes."
+            data-categorie="Spectacle"
+            data-age-min="4"
+            data-age-max="10"
+          >
+            <div class="carte__visuel carte__visuel--vert">
+              <span class="carte__categorie">Spectacle</span>
+              <span class="carte__visuel-texte">Des sorcières</span>
+            </div>
+            <div class="carte__corps">
+              <h2>Des sorcières comme les autres</h2>
+              <p class="carte__sous-titre">Spectacle jeune public</p>
+              <ul class="carte__meta">
+                <li><span data-icone="calendrier"></span> Samedi 7 novembre 2026</li>
+                <li><span data-icone="horloge"></span> 15h00</li>
+                <li><span data-icone="lieu"></span> Salle Barbara</li>
+              </ul>
+              <p class="carte__texte">
+                Un conte musical de 50 minutes, avec des chansons et un chat qui fait diversion.
+              </p>
+              <div class="carte__pied">
+                <span class="etiquette-age">4 à 10 ans</span>
+                <a class="btn btn--fantome btn--petit" href="activite.html?activite=sorcieres">Voir la fiche</a>
+                <span class="carte__tarif">4 €</span>
+              </div>
+            </div>
+          </article>
+
+          <article
+            class="carte"
+            data-carte-activite
+            data-titre="Les 101 dalmatiens"
+            data-sous-titre="Projection"
+            data-resume="Le dessin animé de 1961 revient en version numérique restaurée, pour un après-midi en famille."
+            data-categorie="Cinéma"
+            data-age-min="3"
+            data-age-max="99"
+          >
+            <div class="carte__visuel carte__visuel--ambre">
+              <span class="carte__categorie">Cinéma</span>
+              <span class="carte__visuel-texte">101 dalmatiens</span>
+            </div>
+            <div class="carte__corps">
+              <h2>Les 101 dalmatiens</h2>
+              <p class="carte__sous-titre">Projection</p>
+              <ul class="carte__meta">
+                <li><span data-icone="calendrier"></span> Samedi 24 octobre 2026</li>
+                <li><span data-icone="horloge"></span> 14h30</li>
+                <li><span data-icone="lieu"></span> Salle Barbara</li>
+              </ul>
+              <p class="carte__texte">
+                Version française sous-titrée, 1 h 35. Un adulte accompagnateur gratuit par famille.
+              </p>
+              <div class="carte__pied">
+                <span class="etiquette-age">Dès 3 ans</span>
+                <a class="btn btn--fantome btn--petit" href="activite.html?activite=dalmatiens">Voir la fiche</a>
+                <span class="carte__tarif">4 €</span>
+              </div>
+            </div>
+          </article>
+
+          <article
+            class="carte"
+            data-carte-activite
+            data-titre="Le géant de fer"
+            data-sous-titre="Projection"
+            data-resume="Un robot géant se réveille dans une campagne anglaise et découvre l'amitié."
+            data-categorie="Cinéma"
+            data-age-min="6"
+            data-age-max="99"
+          >
+            <div class="carte__visuel carte__visuel--violet">
+              <span class="carte__categorie">Cinéma</span>
+              <span class="carte__visuel-texte">Le géant de fer</span>
+            </div>
+            <div class="carte__corps">
+              <h2>Le géant de fer</h2>
+              <p class="carte__sous-titre">Projection</p>
+              <ul class="carte__meta">
+                <li><span data-icone="calendrier"></span> Samedi 24 octobre 2026</li>
+                <li><span data-icone="horloge"></span> 18h00</li>
+                <li><span data-icone="lieu"></span> Salle Barbara</li>
+              </ul>
+              <p class="carte__texte">
+                Film d’animation de 1 h 40 en numérique. Prévoyez un goûter avant la séance.
+              </p>
+              <div class="carte__pied">
+                <span class="etiquette-age">Dès 6 ans</span>
+                <a class="btn btn--fantome btn--petit" href="activite.html?activite=geant-de-fer">Voir la fiche</a>
+                <span class="carte__tarif">4 €</span>
+              </div>
+            </div>
+          </article>
+
+          <article
+            class="carte"
+            data-carte-activite
+            data-titre="La viok"
+            data-sous-titre="Se retranscrire en occitan"
+            data-resume="Une soirée d'écriture en occitan, animée par deux habitantes du quartier."
+            data-categorie="Rencontre"
+            data-age-min="16"
+            data-age-max="99"
+          >
+            <div class="carte__visuel carte__visuel--cyan">
+              <span class="carte__categorie">Rencontre</span>
+              <span class="carte__visuel-texte">La viok</span>
+            </div>
+            <div class="carte__corps">
+              <h2>La viok</h2>
+              <p class="carte__sous-titre">Se retranscrire en occitan</p>
+              <ul class="carte__meta">
+                <li><span data-icone="calendrier"></span> Samedi 17 octobre 2026</li>
+                <li><span data-icone="horloge"></span> 20h00</li>
+                <li><span data-icone="lieu"></span> Salle Barbara</li>
+              </ul>
+              <p class="carte__texte">
+                Atelier d’écriture de deux heures, sans prérequis, pour les personnes âgées de 16 ans ou
+                plus.
+              </p>
+              <div class="carte__pied">
+                <span class="etiquette-age">Dès 16 ans</span>
+                <a class="btn btn--fantome btn--petit" href="activite.html?activite=viok">Voir la fiche</a>
+                <span class="carte__tarif">8 €</span>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="note-info" id="aucun-resultat" hidden style="margin-top: 1.5rem">
+          <span aria-hidden="true">!</span>
+          <p>
+            Aucune activité ne correspond à ces critères. Modifiez l’âge ou le type d’activité, ou utilisez le
+            bouton « Réinitialiser les filtres ».
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="pied">
+      <div class="conteneur">
+        <div class="pied__grille">
+          <div>
+            <h2>MJC Tilleul</h2>
+            <p>
+              12 rue du Tilleul<br />
+              69003 Lyon<br />
+              04 72 00 00 00
+            </p>
+          </div>
+          <div>
+            <h2>Navigation</h2>
+            <ul>
+              <li><a href="index.html">Accueil</a></li>
+              <li><a href="activites.html">Les activités</a></li>
+              <li><a href="activite.html?activite=en-corps">Fiche d’une activité</a></li>
+              <li><a href="inscription.html">Inscription</a></li>
+              <li><a href="confirmation.html">Confirmation</a></li>
+            </ul>
+          </div>
+          <div>
+            <h2>Informations</h2>
+            <ul>
+              <li>Horaires : mardi au samedi, 9 h – 19 h</li>
+              <li><a href="#contenu">Aller au contenu</a></li>
+              <li>Tarifs : de 4 € à 8 € selon l’activité</li>
+            </ul>
+          </div>
+        </div>
+        <div class="pied__bas">
+          <p>© <span data-annee>2026</span> MJC Tilleul — maquette pédagogique.</p>
+          <p>Données fictives : aucune inscription réelle n’est enregistrée.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

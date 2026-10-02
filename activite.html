@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="fr" class="no-js">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>En corps · Quand le sport fait danser | MJC Tilleul</title>
+    <meta
+      name="description"
+      content="Fiche détaillée de l'activité En corps à la MJC Tilleul : âge requis, horaires, lieu, tarifs et questions fréquentes."
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Crect width='48' height='48' fill='%230b1a28'/%3E%3Cpath d='M24 6 39 14v20L24 42 9 34V14Z' fill='none' stroke='%2317c3d9' stroke-width='3'/%3E%3C/svg%3E" />
+    <script>
+      document.documentElement.classList.remove("no-js");
+    </script>
+  </head>
+  <body>
+    <a class="lien-evitement" href="#contenu">Aller au contenu principal</a>
+
+    <header class="entete">
+      <div class="entete__interieur conteneur">
+        <a class="logo" href="index.html">
+          <svg width="42" height="42" viewBox="0 0 48 48" aria-hidden="true" focusable="false">
+            <path
+              d="M24 3 42 13v22L24 45 6 35V13Z"
+              fill="none"
+              stroke="#17c3d9"
+              stroke-width="3"
+              stroke-linejoin="round"
+            />
+            <path d="M24 32V17" stroke="#6fe3ef" stroke-width="3" stroke-linecap="round" />
+            <path d="M16 22h16" stroke="#6fe3ef" stroke-width="3" stroke-linecap="round" />
+          </svg>
+          <span>
+            <span class="logo__mention">Maison des cultures</span>
+            MJC Tilleul
+          </span>
+        </a>
+
+        <button
+          type="button"
+          class="btn-menu"
+          data-bouton-menu
+          aria-expanded="false"
+          aria-controls="navigation-principale"
+        >
+          Menu
+        </button>
+
+        <nav
+          id="navigation-principale"
+          class="nav"
+          data-nav
+          data-ouvert="false"
+          aria-label="Navigation principale"
+        >
+          <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="activites.html">Les activités</a></li>
+            <li><a href="activite.html?activite=en-corps" aria-current="page">En corps</a></li>
+            <li><a href="inscription.html">Inscription</a></li>
+          </ul>
+        </nav>
+
+        <a class="btn btn--principal" href="inscription.html">S’inscrire</a>
+      </div>
+    </header>
+
+    <main id="contenu" data-fiche>
+      <nav class="fil-ariane conteneur" aria-label="Fil d’Ariane">
+        <ol>
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="activites.html">Les activités</a></li>
+          <li aria-current="page" data-champ="titre">En corps</li>
+        </ol>
+      </nav>
+
+      <section class="fiche-entete">
+        <div class="conteneur">
+          <p class="fiche-entete__type" data-champ="categorie">Spectacle</p>
+          <h1 data-champ="titre">En corps</h1>
+          <p style="font-size: 1.15rem; color: #cfe0ea" data-champ="sousTitre">Quand le sport fait danser</p>
+          <ul class="fiche-entete__meta">
+            <li><span data-icone="calendrier"></span> <span data-champ="date">Samedi 10 octobre 2026</span></li>
+            <li><span data-icone="horloge"></span> <span data-champ="heure">20h00</span></li>
+            <li><span data-icone="lieu"></span> <span data-champ="lieu">Salle de l’Étage</span></li>
+            <li><span data-icone="public"></span> <span data-champ="age">6 à 12 ans</span></li>
+          </ul>
+        </div>
+      </section>
+
+      <div class="section conteneur">
+        <div class="disposition-2">
+          <div>
+            <h2>À propos</h2>
+            <p data-champ="description">
+              En corps raconte l’histoire de deux amis qui découvrent le sport en s’envolant, en tombant et en se
+              relevant. Le spectacle mêle danse, acrobatie et projections, sans aucune parole.
+            </p>
+            <p class="carte__texte" data-champ="resume">
+              Deux danseurs et un acrobate en baskets : le sport devient langage.
+            </p>
+
+            <h2 id="titre-onglets">Informations de l’activité</h2>
+            <p class="champ__indice" style="margin-bottom: 0.8rem">
+              Trois onglets regroupent les informations. Utilisez les flèches gauche et droite pour changer
+              d’onglet.
+            </p>
+
+            <div class="onglets" data-onglets>
+              <div class="onglets__barre" role="tablist" aria-labelledby="titre-onglets">
+                <button
+                  type="button"
+                  class="onglet"
+                  role="tab"
+                  id="onglet-infos"
+                  aria-controls="panel-infos"
+                  aria-selected="true"
+                  tabindex="0"
+                >
+                  Informations pratiques
+                </button>
+                <button
+                  type="button"
+                  class="onglet"
+                  role="tab"
+                  id="onglet-public"
+                  aria-controls="panel-public"
+                  aria-selected="false"
+                  tabindex="-1"
+                >
+                  Public et accessibilité
+                </button>
+                <button
+                  type="button"
+                  class="onglet"
+                  role="tab"
+                  id="onglet-tarifs"
+                  aria-controls="panel-tarifs"
+                  aria-selected="false"
+                  tabindex="-1"
+                >
+                  Tarifs
+                </button>
+              </div>
+
+              <div class="onglet__panneau" role="tabpanel" id="panel-infos" aria-labelledby="onglet-infos" tabindex="0">
+                <dl>
+                  <dt>Durée</dt>
+                  <dd>1 h 15, sans interruption</dd>
+                  <dt>Ouverture</dt>
+                  <dd>Portes ouvertes 15 minutes avant le début</dd>
+                  <dt>Lieu</dt>
+                  <dd>Salle de l’Étage, 2e étage avec ascenseur</dd>
+                  <dt>Langues</dt>
+                  <dd>Sans parole, musique originale</dd>
+                  <dt>Venir</dt>
+                  <dd>Bus 27, arrêt Tilleul, à 150 m</dd>
+                </dl>
+              </div>
+
+              <div
+                class="onglet__panneau"
+                role="tabpanel"
+                id="panel-public"
+                aria-labelledby="onglet-public"
+                tabindex="0"
+                hidden
+              >
+                <dl>
+                  <dt>Tranche d’âge</dt>
+                  <dd>6 à 12 ans</dd>
+                  <dt>Accompagnement</dt>
+                  <dd>Un adulte accompagnateur gratuit par enfant</dd>
+                  <dt>Accessibilité</dt>
+                  <dd>Salle accessible aux personnes à mobilité réduite</dd>
+                  <dt>Sécurité</dt>
+                  <dd>Un secouriste est présent pendant tout le spectacle</dd>
+                </dl>
+              </div>
+
+              <div
+                class="onglet__panneau"
+                role="tabpanel"
+                id="panel-tarifs"
+                aria-labelledby="onglet-tarifs"
+                tabindex="0"
+                hidden
+              >
+                <dl>
+                  <dt>Plein tarif</dt>
+                  <dd>6 € par personne</dd>
+                  <dt>Tarif enfant</dt>
+                  <dd>4 € par enfant, jusqu’à 12 ans</dd>
+                  <dt>Accompagnateur</dt>
+                  <dd>Gratuit, un adulte par enfant</dd>
+                  <dt>Paiement</dt>
+                  <dd>Sur place, en espèces ou par carte</dd>
+                </dl>
+              </div>
+            </div>
+
+            <h2 id="titre-faq" style="margin-top: 2.2rem">Questions fréquentes</h2>
+            <div class="faq" data-accordeon data-faq-liste>
+              <div class="faq__item">
+                <h3 class="faq__question">
+                  <button
+                    type="button"
+                    class="faq__bouton"
+                    id="faq-bouton-0"
+                    data-accordeon-bouton
+                    aria-expanded="false"
+                    aria-controls="faq-panneau-0"
+                  >
+                    Mon enfant a 5 ans, peut-il venir ?
+                    <span class="faq__icone" aria-hidden="true"></span>
+                  </button>
+                </h3>
+                <div class="faq__reponse" id="faq-panneau-0" role="region" aria-labelledby="faq-bouton-0" hidden>
+                  <p>
+                    Non, cette activité est réservée aux 6-12 ans. Pour les plus jeunes, la projection des 101
+                    Dalmatiens est ouverte dès 3 ans.
+                  </p>
+                </div>
+              </div>
+              <div class="faq__item">
+                <h3 class="faq__question">
+                  <button
+                    type="button"
+                    class="faq__bouton"
+                    id="faq-bouton-1"
+                    data-accordeon-bouton
+                    aria-expanded="false"
+                    aria-controls="faq-panneau-1"
+                  >
+                    Faut-il prévoir une tenue de sport ?
+                    <span class="faq__icone" aria-hidden="true"></span>
+                  </button>
+                </h3>
+                <div class="faq__reponse" id="faq-panneau-1" role="region" aria-labelledby="faq-bouton-1" hidden>
+                  <p>
+                    Non. Une tenue libre et des chaussures souples suffisent : une partie du spectacle se fait
+                    en chaussons.
+                  </p>
+                </div>
+              </div>
+              <div class="faq__item">
+                <h3 class="faq__question">
+                  <button
+                    type="button"
+                    class="faq__bouton"
+                    id="faq-bouton-2"
+                    data-accordeon-bouton
+                    aria-expanded="false"
+                    aria-controls="faq-panneau-2"
+                  >
+                    Puis-je annuler mon inscription ?
+                    <span class="faq__icone" aria-hidden="true"></span>
+                  </button>
+                </h3>
+                <div class="faq__reponse" id="faq-panneau-2" role="region" aria-labelledby="faq-bouton-2" hidden>
+                  <p>
+                    Oui, jusqu’à 48 heures avant le spectacle : le remboursement se fait sur place, à
+                    l’accueil.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <aside class="panneau-lateral" aria-labelledby="titre-resume">
+            <h2 id="titre-resume">En bref</h2>
+            <dl>
+              <dt>Date</dt>
+              <dd data-champ="date">Samedi 10 octobre 2026</dd>
+              <dt>Horaire</dt>
+              <dd data-champ="heure">20h00</dd>
+              <dt>Durée</dt>
+              <dd data-champ="duree">1 h 15</dd>
+              <dt>Lieu</dt>
+              <dd data-champ="lieu">Salle de l’Étage</dd>
+              <dt>Adresse</dt>
+              <dd data-champ="adresse">12 rue du Tilleul, 69003 Lyon</dd>
+              <dt>Âge requis</dt>
+              <dd data-champ="age">6 à 12 ans</dd>
+              <dt>Places</dt>
+              <dd data-champ="places">18 places restantes</dd>
+              <dt>Tarif</dt>
+              <dd data-champ="tarifEnfant">4 € par enfant</dd>
+            </dl>
+
+            <a class="btn btn--vert btn--largeur" href="inscription.html?activite=en-corps" data-lien-inscription>
+              Inscrire mon enfant
+            </a>
+            <p class="champ__indice" style="margin-top: 0.8rem">
+              L’inscription est une simulation : aucune donnée n’est envoyée.
+            </p>
+            <p>
+              <a class="lien-fleche" href="activites.html">Voir les autres activités</a>
+            </p>
+
+            <div class="note-info" data-mention-complete hidden>
+              <span aria-hidden="true">i</span>
+              <p>
+                Les détails de cette activité sont encore en cours de rédaction dans cette maquette.
+              </p>
+            </div>
+          </aside>
+        </div>
+      </div>
+
+      <section class="section section--blanche">
+        <div class="conteneur">
+          <p class="sur-titre">Étape suivante</p>
+          <h2>Prêt à inscrire votre enfant ?</h2>
+          <p class="intro-large">
+            Le formulaire demande le prénom, l’âge, l’activité choisie et l’adresse e-mail du responsable. En
+            cas d’erreur, un message explique quoi corriger.
+          </p>
+          <p style="margin-top: 1.2rem">
+            <a class="btn btn--principal btn--large" href="inscription.html?activite=en-corps" data-lien-inscription>
+              Passer au formulaire
+            </a>
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="pied">
+      <div class="conteneur">
+        <div class="pied__grille">
+          <div>
+            <h2>MJC Tilleul</h2>
+            <p>
+              12 rue du Tilleul<br />
+              69003 Lyon<br />
+              04 72 00 00 00
+            </p>
+          </div>
+          <div>
+            <h2>Navigation</h2>
+            <ul>
+              <li><a href="index.html">Accueil</a></li>
+              <li><a href="activites.html">Les activités</a></li>
+              <li><a href="inscription.html">Inscription</a></li>
+              <li><a href="confirmation.html">Confirmation</a></li>
+            </ul>
+          </div>
+          <div>
+            <h2>Informations</h2>
+            <ul>
+              <li>Horaires : mardi au samedi, 9 h – 19 h</li>
+              <li><a href="#contenu">Aller au contenu</a></li>
+              <li>Tarifs : de 4 € à 8 € selon l’activité</li>
+            </ul>
+          </div>
+        </div>
+        <div class="pied__bas">
+          <p>© <span data-annee>2026</span> MJC Tilleul — maquette pédagogique.</p>
+          <p>Données fictives : aucune inscription réelle n’est enregistrée.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

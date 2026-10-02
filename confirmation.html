@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="fr" class="no-js">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Inscription confirmée | MJC Tilleul</title>
+    <meta
+      name="description"
+      content="Récapitulatif de l'inscription simulée à une activité de la MJC Tilleul : activité, date, lieu, âge et tarif."
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Crect width='48' height='48' fill='%230b1a28'/%3E%3Cpath d='M24 6 39 14v20L24 42 9 34V14Z' fill='none' stroke='%2317c3d9' stroke-width='3'/%3E%3C/svg%3E" />
+    <script>
+      document.documentElement.classList.remove("no-js");
+    </script>
+  </head>
+  <body>
+    <a class="lien-evitement" href="#contenu">Aller au contenu principal</a>
+
+    <header class="entete">
+      <div class="entete__interieur conteneur">
+        <a class="logo" href="index.html">
+          <svg width="42" height="42" viewBox="0 0 48 48" aria-hidden="true" focusable="false">
+            <path
+              d="M24 3 42 13v22L24 45 6 35V13Z"
+              fill="none"
+              stroke="#17c3d9"
+              stroke-width="3"
+              stroke-linejoin="round"
+            />
+            <path d="M24 32V17" stroke="#6fe3ef" stroke-width="3" stroke-linecap="round" />
+            <path d="M16 22h16" stroke="#6fe3ef" stroke-width="3" stroke-linecap="round" />
+          </svg>
+          <span>
+            <span class="logo__mention">Maison des cultures</span>
+            MJC Tilleul
+          </span>
+        </a>
+
+        <button
+          type="button"
+          class="btn-menu"
+          data-bouton-menu
+          aria-expanded="false"
+          aria-controls="navigation-principale"
+        >
+          Menu
+        </button>
+
+        <nav
+          id="navigation-principale"
+          class="nav"
+          data-nav
+          data-ouvert="false"
+          aria-label="Navigation principale"
+        >
+          <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="activites.html">Les activités</a></li>
+            <li><a href="activite.html?activite=en-corps">En corps</a></li>
+            <li><a href="inscription.html">Inscription</a></li>
+          </ul>
+        </nav>
+
+        <a class="btn btn--principal" href="activites.html">Les activités</a>
+      </div>
+    </header>
+
+    <main id="contenu" data-confirmation>
+      <nav class="fil-ariane conteneur" aria-label="Fil d’Ariane">
+        <ol>
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="inscription.html">Inscription</a></li>
+          <li aria-current="page">Confirmation</li>
+        </ol>
+      </nav>
+
+      <div class="section conteneur">
+        <div data-confirmation-ok>
+          <div class="confirmation">
+            <h1><span class="puce-ok" aria-hidden="true">✓</span> Inscription enregistrée</h1>
+            <p>
+              Merci : l’inscription de <strong data-recap="prenom">Maëlys</strong> à l’activité
+              <strong data-recap="titre">En corps</strong> est enregistrée dans cette maquette. Le récapitulatif
+              s’affiche ci-dessous.
+            </p>
+
+            <div class="note-info">
+              <span aria-hidden="true">i</span>
+              <p>
+                Simulation pédagogique : cette inscription n’est pas réelle. Les données restent dans votre
+                navigateur et aucun message n’a été envoyé.
+              </p>
+            </div>
+
+            <table class="recap">
+              <caption>Récapitulatif de l’inscription simulée</caption>
+              <tbody>
+                <tr>
+                  <th scope="row">Activité</th>
+                  <td data-recap="titre">En corps</td>
+                </tr>
+                <tr>
+                  <th scope="row">Prénom</th>
+                  <td data-recap="prenom">Maëlys</td>
+                </tr>
+                <tr>
+                  <th scope="row">Âge</th>
+                  <td data-recap="age">8 ans</td>
+                </tr>
+                <tr>
+                  <th scope="row">Date et horaire</th>
+                  <td><span data-recap="date">Samedi 10 octobre 2026</span>, <span data-recap="heure">20h00</span></td>
+                </tr>
+                <tr>
+                  <th scope="row">Durée</th>
+                  <td data-recap="duree">1 h 15</td>
+                </tr>
+                <tr>
+                  <th scope="row">Lieu</th>
+                  <td><span data-recap="lieu">Salle de l’Étage</span>, <span data-recap="adresse">12 rue du Tilleul, 69003 Lyon</span></td>
+                </tr>
+                <tr>
+                  <th scope="row">Tarif</th>
+                  <td data-recap="tarif">4 €</td>
+                </tr>
+                <tr>
+                  <th scope="row">Situation</th>
+                  <td data-recap="situation">Première inscription</td>
+                </tr>
+                <tr>
+                  <th scope="row">Téléphone</th>
+                  <td data-recap="telephone">06 12 34 56 78</td>
+                </tr>
+                <tr>
+                  <th scope="row">Message</th>
+                  <td data-recap="note">Aucun message</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <p>
+              Un e-mail de confirmation aurait été envoyé à
+              <strong data-email-confirmation>prenom.nom@exemple.fr</strong> si cette maquette était branchée à
+              un serveur.
+            </p>
+
+            <div class="hero__actions">
+              <a class="btn btn--principal" href="activites.html">Voir les autres activités</a>
+              <a class="btn btn--fantome" href="inscription.html?activite=en-corps" data-modifier>
+                Modifier mon inscription
+              </a>
+              <a class="btn btn--fantome" href="inscription.html" data-nouvelle>
+                Faire une autre inscription
+              </a>
+              <button type="button" class="btn btn--fantome" data-imprimer>Imprimer la page</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="confirmation" data-confirmation-vide hidden>
+          <h1><span class="puce-ok" aria-hidden="true">!</span> Aucune inscription à afficher</h1>
+          <p>
+            Cette page affiche le récapitulatif d’une inscription envoyée dans ce navigateur. Il n’y a rien à
+            afficher pour l’instant : renseignez le formulaire pour voir le parcours complet.
+          </p>
+          <p style="margin-top: 1.2rem">
+            <a class="btn btn--principal" href="inscription.html?activite=en-corps">Remplir le formulaire</a>
+          </p>
+          <p>
+            <a class="btn btn--fantome" href="activites.html">Voir les activités</a>
+          </p>
+        </div>
+      </div>
+    </main>
+
+    <footer class="pied">
+      <div class="conteneur">
+        <div class="pied__grille">
+          <div>
+            <h2>MJC Tilleul</h2>
+            <p>
+              12 rue du Tilleul<br />
+              69003 Lyon<br />
+              04 72 00 00 00
+            </p>
+          </div>
+          <div>
+            <h2>Navigation</h2>
+            <ul>
+              <li><a href="index.html">Accueil</a></li>
+              <li><a href="activites.html">Les activités</a></li>
+              <li><a href="activite.html?activite=en-corps">Fiche d’une activité</a></li>
+              <li><a href="inscription.html">Inscription</a></li>
+            </ul>
+          </div>
+          <div>
+            <h2>Informations</h2>
+            <ul>
+              <li>Horaires : mardi au samedi, 9 h – 19 h</li>
+              <li><a href="#contenu">Aller au contenu</a></li>
+              <li>Tarifs : de 4 € à 8 € selon l’activité</li>
+            </ul>
+          </div>
+        </div>
+        <div class="pied__bas">
+          <p>© <span data-annee>2026</span> MJC Tilleul — maquette pédagogique.</p>
+          <p>Données fictives : aucune inscription réelle n’est enregistrée.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

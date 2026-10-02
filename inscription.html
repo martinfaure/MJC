@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="fr" class="no-js">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Inscription à une activité | MJC Tilleul</title>
+    <meta
+      name="description"
+      content="Formulaire d'inscription à une activité de la MJC Tilleul : vérifiez l'âge requis, les horaires et le tarif, puis renseignez les informations de l'enfant et du responsable."
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Crect width='48' height='48' fill='%230b1a28'/%3E%3Cpath d='M24 6 39 14v20L24 42 9 34V14Z' fill='none' stroke='%2317c3d9' stroke-width='3'/%3E%3C/svg%3E" />
+    <script>
+      document.documentElement.classList.remove("no-js");
+    </script>
+  </head>
+  <body>
+    <a class="lien-evitement" href="#contenu">Aller au contenu principal</a>
+
+    <header class="entete">
+      <div class="entete__interieur conteneur">
+        <a class="logo" href="index.html">
+          <svg width="42" height="42" viewBox="0 0 48 48" aria-hidden="true" focusable="false">
+            <path
+              d="M24 3 42 13v22L24 45 6 35V13Z"
+              fill="none"
+              stroke="#17c3d9"
+              stroke-width="3"
+              stroke-linejoin="round"
+            />
+            <path d="M24 32V17" stroke="#6fe3ef" stroke-width="3" stroke-linecap="round" />
+            <path d="M16 22h16" stroke="#6fe3ef" stroke-width="3" stroke-linecap="round" />
+          </svg>
+          <span>
+            <span class="logo__mention">Maison des cultures</span>
+            MJC Tilleul
+          </span>
+        </a>
+
+        <button
+          type="button"
+          class="btn-menu"
+          data-bouton-menu
+          aria-expanded="false"
+          aria-controls="navigation-principale"
+        >
+          Menu
+        </button>
+
+        <nav
+          id="navigation-principale"
+          class="nav"
+          data-nav
+          data-ouvert="false"
+          aria-label="Navigation principale"
+        >
+          <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="activites.html">Les activités</a></li>
+            <li><a href="activite.html?activite=en-corps">En corps</a></li>
+            <li><a href="inscription.html" aria-current="page">Inscription</a></li>
+          </ul>
+        </nav>
+
+        <a class="btn btn--principal" href="#formulaire">Formulaire</a>
+      </div>
+    </header>
+
+    <main id="contenu">
+      <nav class="fil-ariane conteneur" aria-label="Fil d’Ariane">
+        <ol>
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="activites.html">Les activités</a></li>
+          <li aria-current="page">Inscription</li>
+        </ol>
+      </nav>
+
+      <div class="section conteneur">
+        <h1>Inscrire mon enfant à une activité</h1>
+        <p class="intro-large">
+          Cinq champs suffisent : les champs marqués d’un astérisque sont obligatoires. En cas d’erreur,
+          chaque message indique la correction à faire.
+        </p>
+
+        <div class="disposition-2" style="margin-top: 1.6rem">
+          <div>
+            <div class="formulaire" id="formulaire">
+              <form data-formulaire novalidate aria-labelledby="titre-formulaire">
+                <h2 id="titre-formulaire" class="saut">Formulaire d’inscription</h2>
+
+                <div class="resume-erreurs" id="resume-erreurs" role="alert" tabindex="-1" hidden>
+                  <h2>Le formulaire contient des erreurs à corriger</h2>
+                  <ul id="liste-erreurs"></ul>
+                </div>
+
+                <div class="formulaire__grille">
+                  <div class="champ champ--large">
+                    <label for="activite">
+                      Activité souhaitée <span class="champ-obligatoire" aria-hidden="true">*</span>
+                    </label>
+                    <select id="activite" name="activite" data-valider data-nom="Activité souhaitée">
+                      <option value="en-corps">En corps — Quand le sport fait danser (6 à 12 ans)</option>
+                      <option value="sorcieres">Des sorcières comme les autres (4 à 10 ans)</option>
+                      <option value="dalmatiens">Les 101 dalmatiens (dès 3 ans)</option>
+                      <option value="geant-de-fer">Le géant de fer (dès 6 ans)</option>
+                      <option value="viok">La viok — atelier d’écriture en occitan (dès 16 ans)</option>
+                    </select>
+                    <p class="erreur" id="activite-erreur" hidden></p>
+                  </div>
+
+                  <div class="champ">
+                    <label for="prenom-enfant">
+                      Prénom de la personne à inscrire
+                      <span class="champ-obligatoire" aria-hidden="true">*</span>
+                    </label>
+                    <input
+                      type="text"
+                      id="prenom-enfant"
+                      name="prenom"
+                      autocomplete="given-name"
+                      spellcheck="false"
+                      aria-describedby="prenom-enfant-aide prenom-enfant-erreur"
+                      data-valider
+                      data-nom="Prénom"
+                    />
+                    <p class="champ__indice" id="prenom-enfant-aide">Lettres, apostrophes et tirets seulement.</p>
+                    <p class="erreur" id="prenom-enfant-erreur" hidden></p>
+                  </div>
+
+                  <div class="champ">
+                    <label for="age-enfant">
+                      Âge <span class="champ-obligatoire" aria-hidden="true">*</span>
+                    </label>
+                    <input
+                      type="text"
+                      inputmode="numeric"
+                      id="age-enfant"
+                      name="age"
+                      autocomplete="off"
+                      size="4"
+                      aria-describedby="aide-age age-enfant-erreur"
+                      data-valider
+                      data-nom="Âge"
+                    />
+                    <p class="champ__indice" id="aide-age">
+                      Pour cette activité, l’âge doit être compris entre 6 et 12 ans.
+                    </p>
+                    <p class="erreur" id="age-enfant-erreur" hidden></p>
+                  </div>
+
+                  <div class="champ">
+                    <label for="situation">Situation de la personne inscrite</label>
+                    <select id="situation" name="situation">
+                      <option value="">Choisissez une situation</option>
+                      <option value="Premiere inscription">Première inscription à la MJC</option>
+                      <option value="Deja adherent">Déjà adhérent·e</option>
+                      <option value="Ne sait pas encore">Je ne sais pas encore</option>
+                    </select>
+                    <p class="erreur" id="situation-erreur" hidden></p>
+                  </div>
+
+                  <div class="champ">
+                    <label for="email-parent">
+                      Adresse e-mail du responsable
+                      <span class="champ-obligatoire" aria-hidden="true">*</span>
+                    </label>
+                    <input
+                      type="email"
+                      id="email-parent"
+                      name="email"
+                      autocomplete="email"
+                      spellcheck="false"
+                      placeholder="prenom.nom@exemple.fr"
+                      aria-describedby="email-parent-aide email-parent-erreur"
+                      data-valider
+                      data-nom="Adresse e-mail"
+                    />
+                    <p class="champ__indice" id="email-parent-aide">
+                      Elle sert uniquement à afficher la confirmation de simulation.
+                    </p>
+                    <p class="erreur" id="email-parent-erreur" hidden></p>
+                  </div>
+
+                  <div class="champ">
+                    <label for="telephone-parent">Téléphone du responsable</label>
+                    <input
+                      type="tel"
+                      id="telephone-parent"
+                      name="telephone"
+                      autocomplete="tel"
+                      placeholder="06 12 34 56 78"
+                      aria-describedby="telephone-parent-aide telephone-parent-erreur"
+                      data-valider
+                      data-optional
+                      data-nom="Téléphone"
+                    />
+                    <p class="champ__indice" id="telephone-parent-aide">
+                      Champ facultatif, utile en cas de changement de programme.
+                    </p>
+                    <p class="erreur" id="telephone-parent-erreur" hidden></p>
+                  </div>
+
+                  <div class="champ champ--large">
+                    <label for="message">Message à l’équipe (facultatif)</label>
+                    <textarea
+                      id="message"
+                      name="message"
+                      aria-describedby="message-aide"
+                      placeholder="Allergie, besoin d’un accès particulier, question sur l’âge…"
+                    ></textarea>
+                    <p class="champ__indice" id="message-aide">
+                      Les informations de santé ne sont pas demandées ici.
+                    </p>
+                  </div>
+
+                  <div class="champ champ--large champ-case">
+                    <input
+                      type="checkbox"
+                      id="consentement"
+                      name="consentement"
+                      aria-describedby="consentement-aide consentement-erreur"
+                      data-valider
+                      data-nom="Consentement"
+                    />
+                    <div>
+                      <label for="consentement">
+                        J’accepte que ces données servent à cette inscription simulée.
+                        <span class="champ-obligatoire" aria-hidden="true">*</span>
+                      </label>
+                      <p class="champ__indice" id="consentement-aide">
+                        Aucune donnée n’est envoyée ni conservée sur un serveur.
+                      </p>
+                      <p class="erreur" id="consentement-erreur" hidden></p>
+                    </div>
+                  </div>
+                </div>
+
+                <p style="margin-top: 1.5rem">
+                  <button type="submit" class="btn btn--vert btn--large">Envoyer mon inscription</button>
+                </p>
+                <p class="champ__indice">
+                  Un bouton envoie le formulaire, Entrée fait la même chose depuis un champ.
+                </p>
+              </form>
+            </div>
+          </div>
+
+          <aside class="panneau-lateral" data-fiche aria-labelledby="titre-activite-choisie">
+            <h2 id="titre-activite-choisie">Activité sélectionnée</h2>
+            <p class="carte__sous-titre" style="margin-top: -0.2rem" data-champ="sousTitre">
+              Quand le sport fait danser
+            </p>
+            <dl>
+              <dt>Activité</dt>
+              <dd data-champ="titre">En corps</dd>
+              <dt>Date</dt>
+              <dd data-champ="date">Samedi 10 octobre 2026</dd>
+              <dt>Horaire</dt>
+              <dd data-champ="heure">20h00</dd>
+              <dt>Durée</dt>
+              <dd data-champ="duree">1 h 15</dd>
+              <dt>Lieu</dt>
+              <dd data-champ="lieu">Salle de l’Étage</dd>
+              <dt>Âge requis</dt>
+              <dd data-champ="age">6 à 12 ans</dd>
+              <dt>Tarif</dt>
+              <dd data-champ="tarifEnfant">4 € par enfant</dd>
+            </dl>
+
+            <p>
+              <a class="lien-fleche" href="activite.html?activite=en-corps" data-lien-fiche>
+                Consulter la fiche complète
+              </a>
+            </p>
+
+            <div class="note-info">
+              <span aria-hidden="true">i</span>
+              <p>Simulation : cette inscription ne crée aucune place réelle.</p>
+            </div>
+
+            <p style="margin-top: 1rem">
+              <button type="button" class="btn btn--fantome btn--largeur" data-ouvrir-modale>
+                Besoin d’aide ?
+              </button>
+            </p>
+          </aside>
+        </div>
+      </div>
+    </main>
+
+    <footer class="pied">
+      <div class="conteneur">
+        <div class="pied__grille">
+          <div>
+            <h2>MJC Tilleul</h2>
+            <p>
+              12 rue du Tilleul<br />
+              69003 Lyon<br />
+              04 72 00 00 00
+            </p>
+          </div>
+          <div>
+            <h2>Navigation</h2>
+            <ul>
+              <li><a href="index.html">Accueil</a></li>
+              <li><a href="activites.html">Les activités</a></li>
+              <li><a href="activite.html?activite=en-corps">Fiche d’une activité</a></li>
+              <li><a href="confirmation.html">Confirmation</a></li>
+            </ul>
+          </div>
+          <div>
+            <h2>Informations</h2>
+            <ul>
+              <li>Horaires : mardi au samedi, 9 h – 19 h</li>
+              <li><a href="#contenu">Aller au contenu</a></li>
+              <li>Tarifs : de 4 € à 8 € selon l’activité</li>
+            </ul>
+          </div>
+        </div>
+        <div class="pied__bas">
+          <p>© <span data-annee>2026</span> MJC Tilleul — maquette pédagogique.</p>
+          <p>Données fictives : aucune inscription réelle n’est enregistrée.</p>
+        </div>
+      </div>
+    </footer>
+
+    <div class="modale" data-modale hidden>
+      <div class="modale__fond" data-fermer-modale></div>
+      <div
+        class="modale__boite"
+        data-modale-boite
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="titre-modale"
+        tabindex="-1"
+      >
+        <h2 id="titre-modale">Aide à l’inscription</h2>
+        <p>Trois conséquences si une saisie est refusée :</p>
+        <ul class="liste-conseils">
+          <li>
+            <span aria-hidden="true">1</span>
+            <span>
+              Un résumé d’erreurs s’affiche en haut du formulaire : chaque lien conduit au champ à corriger.
+            </span>
+          </li>
+          <li>
+            <span aria-hidden="true">2</span>
+            <span>
+              Le champ fautif est encadré en rouge et relié à son message d’erreur, que le lecteur d’écran
+              lit avec le champ.
+            </span>
+          </li>
+          <li>
+            <span aria-hidden="true">3</span>
+            <span>
+              L’âge hors de la tranche de l’activité est refusé avec l’âge minimum et maximum attendus.
+            </span>
+          </li>
+        </ul>
+        <p>Cette fenêtre se ferme avec Échap ou avec le bouton ci-dessous.</p>
+        <div class="modale__pied">
+          <button type="button" class="btn btn--principal" data-fermer-modale>Fermer</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
